@@ -644,6 +644,7 @@ task generate_bcl_csv {
         zones: zones
         preemptible: preemptible
         maxRetries: if backend == "aws" then awsMaxRetries else 0
+        cpuPlatform: "N2D"
     }
 }
 
@@ -887,6 +888,7 @@ task generate_count_config {
         zones: zones
         preemptible: preemptible
         maxRetries: if backend == "aws" then awsMaxRetries else 0
+        cpuPlatform: "N2D"
     }
 }
 
@@ -933,5 +935,6 @@ task collect_summaries {
         zones: zones
         preemptible: preemptible
         maxRetries: if backend == "aws" then awsMaxRetries else 0
+        cpuPlatform: "N2D"
     }
 }
