@@ -164,5 +164,6 @@ task run_cellranger_atac_aggr {
         cpu: num_cpu
         preemptible: preemptible
         maxRetries: if backend == "aws" then awsMaxRetries else 0
+        cpuPlatform: "AMD Rome"
     }
 }
