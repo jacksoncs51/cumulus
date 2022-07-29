@@ -127,5 +127,6 @@ task run_cellranger_atac_create_reference {
         cpu: 1
         preemptible: preemptible
         maxRetries: if backend == "aws" then awsMaxRetries else 0
+        cpuPlatform: "AMD Rome"
     }
 }
