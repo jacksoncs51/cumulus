@@ -179,5 +179,6 @@ task run_cellranger_mkfastq {
         preemptible: preemptible
         maxRetries: if backend == "aws" then awsMaxRetries else 0
         queueArn: awsQueueArn
+        cpuPlatform: "AMD Rome"
     }
 }
